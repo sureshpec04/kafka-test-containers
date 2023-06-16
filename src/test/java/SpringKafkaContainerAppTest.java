@@ -1,5 +1,5 @@
-import com.madadipouya.springkafkatest.SpringKafkaContainerApp;
-import com.madadipouya.springkafkatest.kafka.KafkaTestContainerConfigurations;
+import com.testcontainers.springkafka.SpringKafkaContainerApp;
+import com.testcontainers.springkafka.kafka.KafkaTestContainerConfigurations;
 import org.springframework.boot.SpringApplication;
 
 public class SpringKafkaContainerAppTest {
