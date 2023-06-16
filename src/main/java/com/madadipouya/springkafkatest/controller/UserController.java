@@ -48,4 +48,13 @@ public class UserController {
         List<com.madadipouya.springkafkatest.entity.User> users = userService.getUsers(name);
         return users.stream().map(user -> new User(user.getId(), user.getFirstName(), user.getLastName())).collect(Collectors.toList());
     }
+
+    @GetMapping("/all")
+    @ResponseStatus
+    @Operation(summary = "find all users", description = "Returns a list of users that matchers the given name")
+    public List<User> getAllUsers() {
+        List<com.madadipouya.springkafkatest.entity.User> users = userService.findAllUsers();
+        return users.stream().map(user -> new User(user.getId(), user.getFirstName(), user.getLastName())).collect(Collectors.toList());
+
+    }
 }

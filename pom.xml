@@ -18,7 +18,7 @@
 		<java.version>17</java.version>
 		<flyway.version>9.18.0</flyway.version>
 		<testcontainers.version>1.18.1</testcontainers.version>
-		<flyway.url>jdbc:mysql://localhost:3306/test</flyway.url>
+		<flyway.url>jdbc:mysql://localhost:3308/test</flyway.url>
 		<flyway.user>root</flyway.user>
 		<flyway.password>secret</flyway.password>
 	</properties>
@@ -95,6 +95,17 @@
 			<version>${testcontainers.version}</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-testcontainers -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-testcontainers</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>org.testcontainers</groupId>
 			<artifactId>junit-jupiter</artifactId>

@@ -5,6 +5,7 @@ import org.apache.kafka.clients.admin.NewTopic;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.annotation.Order;
+import org.springframework.kafka.config.TopicBuilder;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
@@ -33,6 +34,11 @@ public class UserKafkaProducer {
     @Bean
     @Order(-1)
     public NewTopic createNewTopic() {
+//        TopicBuilder.name(topic)
+//                .partitions(partitionNumber)
+//                .replicas(replicationFactor)
+//                .compact()
+//                .build();
         return new NewTopic(topic, partitionNumber, (short) replicationFactor);
     }
 }

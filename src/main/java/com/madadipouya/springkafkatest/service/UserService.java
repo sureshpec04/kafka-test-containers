@@ -9,4 +9,6 @@ public interface UserService {
     void save(User user);
 
     List<com.madadipouya.springkafkatest.entity.User> getUsers(String firstName);
+
+    List<com.madadipouya.springkafkatest.entity.User> findAllUsers();
 }
